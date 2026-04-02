@@ -82,6 +82,8 @@ Switch roles using dropdown (top right)
 - CSS (Custom Styling)
 - Recharts (for charts)
 
+## 📂 Folder Structure
+
 ```plaintext
 finance-dashboard/
 │
