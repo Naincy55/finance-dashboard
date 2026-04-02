@@ -2,7 +2,20 @@ import React, { useContext } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { AppContext } from "../../context/AppContext";
 
-const COLORS = ["#6366f1", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6"];
+const COLORS = [
+  "#6366f1", // indigo
+  "#10b981", // green
+  "#f59e0b", // amber
+  "#ef4444", // red
+  "#8b5cf6", // purple
+  "#06b6d4", // cyan
+  "#ec4899", // pink
+  "#84cc16", // lime
+  "#f97316", // orange
+  "#14b8a6", // teal
+  "#a855f7", // violet
+  "#eab308", // yellow
+];
 
 function CategoryChart() {
   const { transactions } = useContext(AppContext);
@@ -28,7 +41,7 @@ function CategoryChart() {
       {data.length === 0 ? (
         <p>No data available</p>
       ) : (
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%" height={300}>
           <PieChart>
             <Pie
               data={data}

@@ -250,3 +250,83 @@
   transform: translateY(-5px) scale(1.02);
   transition: 0.3s ease;
 }
+
+
+.reset-btn {
+  background: linear-gradient(135deg, #ff4d4f, #ff7875);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Hover effect */
+.reset-btn:hover {
+  background: linear-gradient(135deg, #d9363e, #ff4d4f);
+  transform: translateY(-1px);
+}
+
+/* Click effect */
+.reset-btn:active {
+  transform: scale(0.96);
+}
+
+/* Optional: subtle shadow */
+.reset-btn {
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
+}
+
+
+/* 📱 MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  /* Header stack */
+  .transaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Buttons wrap nicely */
+  .transaction-header div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Transaction card becomes vertical */
+  .transaction {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Amount alignment */
+  .amount {
+    align-self: flex-end;
+    font-size: 15px;
+  }
+
+  /* Badge spacing */
+  .badge {
+    align-self: flex-start;
+  }
+
+  /* Edit/Delete buttons */
+  .transaction > div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Modal full width */
+  .modal {
+    width: 90%;
+    padding: 15px;
+  }
+}

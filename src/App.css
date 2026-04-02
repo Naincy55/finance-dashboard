@@ -48,6 +48,9 @@ h3 {
   gap: 20px;
 }
 
+.card{
+   min-width: 0;
+}
 /* 💳 COMMON CARD STYLE */
 .card,
 .transactions-section,
@@ -73,7 +76,9 @@ h3 {
   transition: 0.3s;
 }
 
-/* 📱 RESPONSIVE */
+/* 📱 RESPONSIVENESS IMPROVEMENTS */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .charts-section {
     grid-template-columns: 1fr;
@@ -84,9 +89,40 @@ h3 {
   }
 }
 
-/* 📱 MOBILE */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* Dashboard padding */
   .dashboard {
     padding: 15px;
+  }
+
+  /* Stack everything */
+  .charts-section,
+  .middle-section {
+    grid-template-columns: 1fr;
+  }
+
+  /* Card spacing */
+  .card,
+  .transactions-section,
+  .insights-section {
+    padding: 15px;
+  }
+
+  /* Heading size */
+  h3 {
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 15px;
   }
 }

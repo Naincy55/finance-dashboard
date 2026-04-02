@@ -49,6 +49,14 @@ export const AppProvider = ({ children }) => {
     );
   };
 
+  // Reset data
+const resetData = () => {
+  if (window.confirm("Reset all data?")) {
+    localStorage.removeItem("transactions");
+    setTransactions(transactionsData);
+  }
+};
+
   // 🔥 DERIVED DATA
   const income = transactions
     .filter(t => t.type === "income")
@@ -73,6 +81,7 @@ export const AppProvider = ({ children }) => {
       addTransaction,
       deleteTransaction,
       editTransaction,
+      resetData,
 
       income,
       expense,

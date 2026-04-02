@@ -11,6 +11,7 @@ function TransactionList() {
     deleteTransaction,
     addTransaction,
     editTransaction,
+    resetData,
   } = useContext(AppContext);
 
   const [showForm, setShowForm] = useState(false);
@@ -104,6 +105,18 @@ function TransactionList() {
           <button className="export-btn" onClick={exportCSV}>
             Export CSV
           </button>
+
+           {/* ✅ RESET BUTTON */}
+  <button
+    className="reset-btn"
+    onClick={() => {
+      if (window.confirm("Reset all data to default?")) {
+        resetData();
+      }
+    }}
+  >
+    Reset
+  </button>
 
           {role === "admin" && (
             <button className="add-btn" onClick={() => setShowForm(true)}>

@@ -37,7 +37,7 @@ function BalanceChart() {
       {chartData.length === 0 ? (
         <p>No data available</p>
       ) : (
-        <ResponsiveContainer>
+        <ResponsiveContainer  width="100%" height={200}>
           <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
