@@ -1,0 +1,25 @@
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.insights-container {
+  padding: 20px;
+  /* color: #000; */
+}
+
+.insights-container p {
+  margin: 8px 0;
+}
+
+.insight-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: white;
+}

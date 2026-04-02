@@ -1,0 +1,26 @@
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter-bar input {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+}
+
+.filter-buttons button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #1e293b;
+  color: white;
+}
+
+.filter-buttons .active {
+  background: #6366f1;
+}

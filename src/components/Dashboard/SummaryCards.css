@@ -1,0 +1,25 @@
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}

@@ -1,0 +1,252 @@
+/* 🌙 Container */
+.transaction-container {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+/* 🔥 Header */
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.transaction-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* ➕ Add Button */
+.add-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* 📋 Transaction Card */
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ✨ Hover effect */
+.transaction:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 📂 Category + Date */
+.transaction div p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.transaction div small {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* 💰 Amount */
+.amount {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 🟢 Income */
+.amount.income {
+  color: #34d399;
+}
+
+/* 🔴 Expense */
+.amount.expense {
+  color: #f87171;
+}
+
+/* 🏷 Badge */
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* Badge colors */
+.badge.income {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.badge.expense {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+
+/* 🗑 Delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #f87171;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ❌ Empty state */
+.no-data {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* 🔥 Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📦 Modal Box */
+.modal {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 📝 Inputs */
+.modal input,
+.modal select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+}
+
+/* ✨ Focus */
+.modal input:focus,
+.modal select:focus {
+  outline: 2px solid #6366f1;
+}
+
+/* 🔘 Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Add button */
+.modal button[type="submit"] {
+  background: #6366f1;
+  color: white;
+}
+
+/* Cancel */
+.modal button[type="button"] {
+  background: #334155;
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* ✏️ Edit Button */
+.edit-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #60a5fa;
+}
+
+.edit-btn:hover {
+  transform: scale(1.2);
+}
+
+/* 📤 Export Button */
+.export-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.export-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✨ Entry Animation */
+.animate {
+  animation: fadeSlide 0.4s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Hover Animation */
+.transaction:hover {
+  transform: translateY(-5px) scale(1.02);
+  transition: 0.3s ease;
+}
