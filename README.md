@@ -84,53 +84,50 @@ Switch roles using dropdown (top right)
 
 ---
 
-## 📂 Folder Structure
 finance-dashboard/
 │
 ├── public/
-│ └── index.html
+│   └── index.html
 │
 ├── src/
-│ ├── components/
-│ │
-│ │ ├── Dashboard/
-│ │ │ ├── SummaryCards.js
-      ├── SummaryCards.css
-│ │ │ ├── BalanceChart.js
-│ │ │ ├── CategoryChart.js
-│ │
-│ │ ├── Transactions/
-│ │ │ ├── TransactionList.js
-      ├── TransactionList.css
-│ │ │ ├── FilterBar.js
-      ├── FilterBar.css
-│ │
-│ │ ├── Insights/
-│ │ │ ├── InsightsPanel.js
-      ├── InsightsPanel.css
-│ │
-│ │ ├── Common/
-│ │ │ ├── Navbar.js
-      ├── Navbar.css
-│ │ │ ├── RoleSwitcher.js
+│   ├── components/
+│   │
+│   │   ├── Dashboard/
+│   │   │   ├── SummaryCards.js
+│   │   │   ├── SummaryCards.css
+│   │   │   ├── BalanceChart.js
+│   │   │   ├── CategoryChart.js
+│   │
+│   │   ├── Transactions/
+│   │   │   ├── TransactionList.js
+│   │   │   ├── TransactionList.css
+│   │   │   ├── FilterBar.js
+│   │   │   ├── FilterBar.css
+│   │
+│   │   ├── Insights/
+│   │   │   ├── InsightsPanel.js
+│   │   │   ├── InsightsPanel.css
+│   │
+│   │   ├── Common/
+│   │   │   ├── Navbar.js
+│   │   │   ├── Navbar.css
+│   │   │   ├── RoleSwitcher.js
+│   │
+│   ├── context/
+│   │   └── AppContext.js
 │
-│ ├── context/
-│ │ ├── AppContext.js
+│   ├── data/
+│   │   └── mockData.js
 │
-│ ├── data/
-│ │ ├── mockData.js
+│   ├── pages/
+│   │   └── Dashboard.js
 │
-│ ├── pages/
-│ │ ├── Dashboard.js
-│
-│ ├── App.js
-│ ├── App.css
-  ├── AppTest.js
-│ ├── index.js
+│   ├── App.js
+│   ├── App.css
+│   ├── AppTest.js
+│   ├── index.js
 │
 ├── package.json
-
-
 ---
 
 ## ⚙️ Installation & Setup
