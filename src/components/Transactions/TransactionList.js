@@ -10,7 +10,7 @@ function TransactionList() {
     role,
     deleteTransaction,
     addTransaction,
-    editTransaction
+    editTransaction,
   } = useContext(AppContext);
 
   const [showForm, setShowForm] = useState(false);
@@ -21,7 +21,7 @@ function TransactionList() {
     category: "",
     amount: "",
     type: "expense",
-    date: ""
+    date: "",
   });
 
   const handleChange = (e) => {
@@ -39,12 +39,12 @@ function TransactionList() {
     if (editMode) {
       editTransaction({
         ...form,
-        amount: Number(form.amount)
+        amount: Number(form.amount),
       });
     } else {
       addTransaction({
         ...form,
-        amount: Number(form.amount)
+        amount: Number(form.amount),
       });
     }
 
@@ -59,7 +59,7 @@ function TransactionList() {
       category: "",
       amount: "",
       type: "expense",
-      date: ""
+      date: "",
     });
   };
 
@@ -70,9 +70,9 @@ function TransactionList() {
   };
 
   const exportCSV = () => {
-    const csv = transactions.map(t =>
-      `${t.category},${t.amount},${t.type},${t.date}`
-    ).join("\n");
+    const csv = transactions
+      .map((t) => `${t.category},${t.amount},${t.type},${t.date}`)
+      .join("\n");
 
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
@@ -97,7 +97,6 @@ function TransactionList() {
 
   return (
     <div className="transaction-container">
-
       <div className="transaction-header">
         <h3>Transactions</h3>
 
@@ -119,38 +118,37 @@ function TransactionList() {
       ) : (
         filtered.map((t) => (
           <div key={t.id} className="transaction animate">
-
             <div>
               <p>{t.category}</p>
               <small>{t.date}</small>
             </div>
 
-            <span className={`amount ${t.type}`}>
-              ₹{t.amount}
-            </span>
+            <span className={`amount ${t.type}`}>₹{t.amount}</span>
 
-            <span className={`badge ${t.type}`}>
-              {t.type}
-            </span>
+            <span className={`badge ${t.type}`}>{t.type}</span>
 
             {role === "admin" && (
               <div style={{ display: "flex", gap: "8px" }}>
-                <button
-                  className="edit-btn"
-                  onClick={() => handleEdit(t)}
-                >
+                <button className="edit-btn" onClick={() => handleEdit(t)}>
                   ✏️
                 </button>
 
                 <button
                   className="delete-btn"
-                  onClick={() => deleteTransaction(t.id)}
+                  onClick={() => {
+                    if (
+                      window.confirm(
+                        "Are you sure you want to delete this transaction?",
+                      )
+                    ) {
+                      deleteTransaction(t.id);
+                    }
+                  }}
                 >
                   🗑
                 </button>
               </div>
             )}
-
           </div>
         ))
       )}
@@ -158,11 +156,9 @@ function TransactionList() {
       {showForm && (
         <div className="modal-overlay">
           <div className="modal">
-
             <h3>{editMode ? "Edit Transaction" : "Add Transaction"}</h3>
 
             <form onSubmit={handleSubmit}>
-
               <input
                 type="text"
                 name="category"
@@ -186,25 +182,18 @@ function TransactionList() {
                 onChange={handleChange}
               />
 
-              <select
-                name="type"
-                value={form.type}
-                onChange={handleChange}
-              >
+              <select name="type" value={form.type} onChange={handleChange}>
                 <option value="expense">Expense</option>
                 <option value="income">Income</option>
               </select>
 
               <div className="modal-buttons">
-                <button type="submit">
-                  {editMode ? "Update" : "Add"}
-                </button>
+                <button type="submit">{editMode ? "Update" : "Add"}</button>
 
                 <button type="button" onClick={resetForm}>
                   Cancel
                 </button>
               </div>
-
             </form>
           </div>
         </div>

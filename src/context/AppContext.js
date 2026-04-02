@@ -4,25 +4,30 @@ import { transactionsData } from "../data/mockData";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [transactions, setTransactions] = useState([]);
-  const [role, setRole] = useState("viewer");
+
+  // ✅ Load transactions directly (BEST PRACTICE)
+  const [transactions, setTransactions] = useState(() => {
+    const stored = localStorage.getItem("transactions");
+    return stored ? JSON.parse(stored) : transactionsData;
+  });
+
+  // ✅ Persist role also
+  const [role, setRole] = useState(() => {
+    return localStorage.getItem("role") || "viewer";
+  });
+
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
 
-  // ✅ Load from localStorage
-  useEffect(() => {
-    const stored = localStorage.getItem("transactions");
-    if (stored) {
-      setTransactions(JSON.parse(stored));
-    } else {
-      setTransactions(transactionsData);
-    }
-  }, []);
-
-  // ✅ Save to localStorage
+  // ✅ Save transactions
   useEffect(() => {
     localStorage.setItem("transactions", JSON.stringify(transactions));
   }, [transactions]);
+
+  // ✅ Save role
+  useEffect(() => {
+    localStorage.setItem("role", role);
+  }, [role]);
 
   // 🔥 ADD TRANSACTION
   const addTransaction = (newTx) => {
@@ -44,7 +49,7 @@ export const AppProvider = ({ children }) => {
     );
   };
 
-  // 🔥 DERIVED DATA (for cards + insights)
+  // 🔥 DERIVED DATA
   const income = transactions
     .filter(t => t.type === "income")
     .reduce((acc, t) => acc + t.amount, 0);
