@@ -47,7 +47,7 @@ The goal of this project is to demonstrate frontend development skills including
 - **Admin**
   - Can add/delete transactions
 
-Switch roles using dropdown (top right)
+Switch roles using toggle (left, right)
 
 ---
 
