@@ -82,8 +82,7 @@ Switch roles using dropdown (top right)
 - CSS (Custom Styling)
 - Recharts (for charts)
 
----
-
+```plaintext
 finance-dashboard/
 │
 ├── public/
@@ -91,7 +90,6 @@ finance-dashboard/
 │
 ├── src/
 │   ├── components/
-│   │
 │   │   ├── Dashboard/
 │   │   │   ├── SummaryCards.js
 │   │   │   ├── SummaryCards.css
@@ -112,7 +110,7 @@ finance-dashboard/
 │   │   │   ├── Navbar.js
 │   │   │   ├── Navbar.css
 │   │   │   ├── RoleSwitcher.js
-│   │
+│
 │   ├── context/
 │   │   └── AppContext.js
 │
@@ -128,7 +126,7 @@ finance-dashboard/
 │   ├── index.js
 │
 ├── package.json
----
+```
 
 ## ⚙️ Installation & Setup
 
