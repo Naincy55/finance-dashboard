@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
 import RoleSwitcher from "./RoleSwitcher";
+import { AppContext } from "../../context/AppContext";
 
 function Navbar() {
+  const { theme, setTheme } = useContext(AppContext);
+
   return (
     <div className="navbar">
 
@@ -13,6 +16,16 @@ function Navbar() {
 
       <div className="nav-right">
         <RoleSwitcher />
+
+        {/* 🔥 Theme Toggle */}
+        <button
+          className="theme-btn"
+          onClick={() =>
+            setTheme(theme === "light" ? "dark" : "light")
+          }
+        >
+          {theme === "light" ? "🌙" : "☀️"}
+        </button>
       </div>
 
     </div>

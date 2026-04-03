@@ -24,3 +24,31 @@
 .filter-buttons .active {
   background: #6366f1;
 }
+
+/* ========================= */
+/* 🌞 LIGHT MODE FIX ONLY */
+/* ========================= */
+
+/* Input */
+.light .filter-bar input {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+/* Buttons */
+.light .filter-buttons button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* Active button */
+.light .filter-buttons .active {
+  background: #6366f1;
+  color: white;
+}
+
+/* Hover effect */
+.light .filter-buttons button:hover {
+  background: #d1d5db;
+}

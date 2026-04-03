@@ -9,6 +9,7 @@ p {
 
 .insights-container {
   padding: 20px;
+    height: fit-content;
   /* color: #000; */
 }
 
@@ -17,9 +18,37 @@ p {
 }
 
 .insight-message {
-  margin-top: 15px;
+  /* margin-top: 15px; */
   padding: 12px;
   border-radius: 10px;
   background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: white;
+}
+
+/* ========================= */
+/* 🌞 LIGHT MODE FIX ONLY */
+/* ========================= */
+
+/* Container */
+.light .insights-container {
+  background: white;
+  color: #111827;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Heading */
+.light .insights-container h3 {
+  color: #111827;
+}
+
+/* Text */
+.light .insights-container p {
+  color: #374151;
+}
+
+/* Insight message */
+.light .insight-message {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
   color: white;
 }

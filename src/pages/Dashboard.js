@@ -9,25 +9,22 @@ import CategoryChart from "../components/Dashboard/CategoryChart";
 function Dashboard() {
   return (
     <div className="dashboard">
-
       <div className="top-section">
         <SummaryCards />
       </div>
 
       {/* 🔥 ADD CHARTS */}
       <div className="charts-section">
+        <div className="card">
+          {/* <h3>Balance Trend</h3> */}
+          <BalanceChart />
+        </div>
 
-  <div className="card">
-    {/* <h3>Balance Trend</h3> */}
-    <BalanceChart />
-  </div>
-
-  <div className="card">
-    {/* <h3>Spending Breakdown</h3> */}
-    <CategoryChart />
-  </div>
-
-</div>
+        <div className="card">
+          {/* <h3>Spending Breakdown</h3> */}
+          <CategoryChart />
+        </div>
+      </div>
 
       <div className="middle-section">
         <div className="transactions-section">
@@ -35,8 +32,13 @@ function Dashboard() {
           <TransactionList />
         </div>
 
-        <div className="insights-section">
-          <InsightsPanel />
+        <div
+          className="dashboard-bottom"
+          style={{alignItems: "flex-start" }}
+        >
+          <div className="insights-section">
+            <InsightsPanel />
+          </div>
         </div>
       </div>
     </div>

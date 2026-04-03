@@ -76,6 +76,50 @@ h3 {
   transition: 0.3s;
 }
 
+
+
+/* LIGHT MODE */
+.light {
+  background-color: #f4f6f8;
+  color: #000;
+  min-height: 100vh;
+}
+
+/* DARK MODE */
+.dark {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.dark .navbar {
+  background: #1e1e2f;
+}
+
+/* Cards & Sections */
+.dark .transactions-section,
+.dark .insights-section {
+  background: #1e1e2f;
+}
+
+/* Transaction rows */
+.dark .transaction {
+  border-bottom: 1px solid #333;
+}
+
+/* Buttons */
+.dark button {
+  background: #333;
+  color: white;
+}
+
+/* Smooth transition */
+.light,
+.dark {
+  transition: all 0.3s ease;
+}
+
 /* 📱 RESPONSIVENESS IMPROVEMENTS */
 
 /* Tablet */

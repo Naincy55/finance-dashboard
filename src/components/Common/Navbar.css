@@ -61,3 +61,57 @@
 .role-switcher button:hover {
   transform: scale(1.05);
 }
+
+.theme-btn {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.theme-btn:hover {
+  background: #bbb;
+}
+
+
+/* ========================= */
+/* 🌞 LIGHT MODE FIX ONLY */
+/* ========================= */
+
+.light .navbar {
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  backdrop-filter: none; /* remove blur */
+}
+
+.light .nav-left h2 {
+  color: #111827;
+}
+
+.light .tagline {
+  color: #6b7280;
+}
+
+/* Role switcher fix */
+.light .role-switcher {
+  background: #f3f4f6;
+}
+
+.light .role-switcher button {
+  color: #374151;
+}
+
+/* Keep active same (no change needed) */
+
+/* Theme button fix */
+.light .theme-btn {
+  background: #e5e7eb;
+  color: black;
+}
+
+.light .theme-btn:hover {
+  background: #d1d5db;
+}

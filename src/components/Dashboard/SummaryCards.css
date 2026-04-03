@@ -3,23 +3,63 @@
   gap: 20px;
 }
 
+/* COMMON CARD STYLE */
 .card {
   flex: 1;
   padding: 20px;
   border-radius: 12px;
-  color: white;
   font-weight: bold;
   font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-.card:nth-child(1) {
+/* ========================= */
+/* 🌞 LIGHT MODE */
+/* ========================= */
+
+.light .card {
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/* 🌙 DARK MODE */
+/* ========================= */
+
+.dark .card {
+  color: white;
+}
+
+.dark .card:nth-child(1) {
   background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-.card:nth-child(2) {
+.dark .card:nth-child(2) {
   background: linear-gradient(135deg, #43cea2, #185a9d);
 }
 
-.card:nth-child(3) {
+.dark .card:nth-child(3) {
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+
+
+.light .card:nth-child(1) {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.light .card:nth-child(2) {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.light .card:nth-child(3) {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+/* ========================= */
+/* ✨ HOVER EFFECT */
+/* ========================= */
+
+.card:hover {
+  transform: translateY(-5px);
 }
